@@ -1,0 +1,47 @@
+# GET REQUESTS
+
+# Get artists
+GET http://localhost:8080/artists
+
+###
+
+# Get an artist by id
+GET http://localhost:8080/artists/1
+
+###
+
+# Get an artist that does not exist
+GET http://localhost:8080/artists/3
+
+###
+
+# Get an artist with an invalid id
+GET http://localhost:8080/artists/abc
+
+###
+
+# POST REQUESTS
+
+# Create an artist
+POST http://localhost:8080/artists
+content-type: application/json
+
+{ "name": "Test Artist 1", "type": "person" }
+
+###
+
+# Create another artist
+POST http://localhost:8080/artists
+content-type: application/json
+
+{ "name": "Test Artist 2", "type": "group" }
+
+###
+
+# PUT REQUESTS
+
+# Update an artist (Currently not implemented)
+PUT http://localhost:8080/artists/1
+content-type: application/json
+
+{ "name": "Test Artist 1 Updated", "type": "person" }
