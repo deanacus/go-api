@@ -4,6 +4,9 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
+
+	model 	"github.com/deanacus/music-api/models/artists"
+
 )
 
 type Artist struct {
@@ -43,6 +46,7 @@ func InitRoutes(router *gin.Engine) {
 }
 
 func listArtists(c *gin.Context) {
+	model.getAlbum()
 	c.JSON(http.StatusOK, artists)
 }
 
